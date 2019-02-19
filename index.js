@@ -57,7 +57,7 @@ module.exports = function(source, map, meta) {
         pattern.lastIndex,
         forPath
           ? JSON.stringify(addonRequest)
-          : `require(${JSON.stringify(addonRequest)})`,
+          : `require(${JSON.stringify(addonRequest)});`,
       );
 
       match = pattern.exec(source);
